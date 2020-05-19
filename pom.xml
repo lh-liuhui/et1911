@@ -8,27 +8,31 @@
   <modules>
   	<module>spring-ioc-review</module>
     <module>springmvc-01-hello</module>
+    <module>spring-ioc-01-lx</module>
   </modules>
   
-  <dependencies>
-  	<dependency>
-  		<groupId>org.springframework</groupId>
-  		<artifactId>spring-context</artifactId>
-  		<version>5.2.2.RELEASE</version>
-  	</dependency>
-  	
-  	<!-- servlet-api -->
-  	<dependency>
-  		<groupId>javax.servlet</groupId>
-  		<artifactId>javax.servlet-api</artifactId>
-  		<version>3.1.0</version>
-  	</dependency>
-  	
-  	<!-- spring-webmvc -->
-  	<dependency>
-  		<groupId>org.springframework</groupId>
-  		<artifactId>spring-webmvc</artifactId>
-  		<version>5.2.2.RELEASE</version>
-  	</dependency>
-  </dependencies>
+  <!-- 作用：声明依赖（管理依赖），但是不引入依赖，由子工程决定自己需要的依赖 -->
+ <dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>5.2.2.RELEASE</version>
+		</dependency>
+
+		<!-- servlet-api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+	</dependency>
+
+	<!-- spring-webmvc -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-webmvc</artifactId>
+		<version>5.2.2.RELEASE</version>
+	</dependency>
+</dependencies>
+</dependencyManagement>
 </project>
