@@ -13,6 +13,12 @@
 </style>
 </head>
 <body>
+<div>
+	<span th:text="${paramError}"></span>
+</div>
+
+
+
 	<div id="form">
 		<form id="addForm" th:action="@{/car/add}" method="post"
 			enctype="multipart/form-data" class="form-horizontal" role="form">
@@ -143,12 +149,12 @@
 			et1911.querySelectDict('level');
 			et1911.querySelectDict('output_volume');
 			et1911.queryGearbox();
-			et1911.validateForm();
+			//et1911.validateForm();
 		});
 		
 		//查询级别和排量
 		let et1911={
-			//添加表单校验
+			//自定义添加表单校验
 			validateForm: function() {
 				//第一个参数：校验规则名称
 				//第二个参数：执行校验的函数
