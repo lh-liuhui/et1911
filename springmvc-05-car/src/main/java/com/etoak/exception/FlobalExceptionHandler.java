@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class FlobalExceptionHandler {
 	
+	//表示这个方法只拦截Et1911LoginException异常
 	@ExceptionHandler(Et1911LoginException.class)
 	public ModelAndView handlLoginException(Et1911LoginException e) {
 		String msg=e.getMessage();

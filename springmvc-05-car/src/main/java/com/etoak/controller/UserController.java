@@ -68,6 +68,7 @@ public class UserController {
 		
 		//登录成功，跳转index页面
 		return "redirect:/";
+		
 	}
 
 }
